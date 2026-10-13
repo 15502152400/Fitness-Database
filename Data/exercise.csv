@@ -1,0 +1,4 @@
+id,name,primary_muscle,equipment,unit,tracking_type,notes
+001,Smith Bench Press,chest,smith_machine,kg,weight_reps,
+002,Pull Up,back,pullup_bar,kg,assistance_reps,
+003,Dumbbell Row,back,dumbbell,kg,weight_reps,
