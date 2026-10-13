@@ -1,44 +1,38 @@
 # Fitness Database
 
-个人与家庭成员健身数据管理库。
+个人与家庭成员长期健身数据仓库。
 
-## 目标
+目标：建立可持续多年使用的训练、身体变化、照片、分析数据库。
 
-记录长期健身过程中的：
-
-- 训练计划与训练日志
-- 身体状态变化
-- 体测数据
-- 身体照片记录
-- 动作表现变化
-- 阶段总结与调整依据
-
-## 数据结构
+## 核心结构
 
 ```
 Fitness-Database/
 ├── README.md
-├── TEMPLATE/
-│   ├── Training-Log.md
-│   ├── Body-Profile.md
-│   ├── Body-Measurement.md
-│   └── Monthly-Review.md
-├── Members/
-│   └── member-name/
-│       ├── Profile.md
-│       ├── Training/
-│       ├── Measurements/
-│       ├── Photos/
-│       └── Reviews/
-└── Database/
-    ├── Exercise-Library.md
-    └── Equipment.md
+├── TEMPLATE/                 # 所有记录模板
+├── Members/                  # 家庭成员数据
+│   └── Member-Name/
+│       ├── Profile.md        # 基础档案
+│       ├── Training/         # 每次训练记录
+│       ├── Measurements/     # 身体检测记录
+│       ├── Photos/           # 相册索引
+│       ├── Nutrition/        # 饮食记录
+│       └── Reviews/          # 阶段复盘
+├── Database/                 # 公共数据库
+│   ├── Exercise-Library.md
+│   ├── Equipment.md
+│   └── Standards.md
+└── Analytics/                # 数据分析
+    ├── Strength.md
+    ├── Body-Change.md
+    └── Progress.md
 ```
 
-## 记录原则
+## 数据规范
 
-- 日期统一使用 YYYY-MM-DD
-- 重量单位默认 kg，哑铃单只重量单独注明
-- 每次训练保留动作、重量、次数、组数、组间休息
-- 身体照片只保存外部相册链接，不直接上传隐私照片
-- 所有成员独立管理，方便长期追踪
+- 日期：YYYY-MM-DD
+- 重量：kg；哑铃注明单只重量
+- 训练必须记录：动作、重量、次数、组数、组间休息、RPE、备注
+- 身体照片不直接上传 GitHub，仅保存相册链接和索引
+- 每位成员独立目录
+- 数据设计兼容未来 Excel/数据库导入
